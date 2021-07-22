@@ -1,15 +1,17 @@
-function superbowlWin(array){
-   const found = array.find(winResults)
-   if(found){
-       return found.year
-   }
-//    else{
+// function superbowlWin(array){
+//    const found = array.find(function(element){
+//        if (element.result === "W"){
+//            return element
+//        }
+//    })
+//    if(found){
 //        return found.year
 //    }
-}
+// }
 
-winResults = function(element){
-    if (element.result === "W"){
-        return element.year
+function superbowlWin(record){
+    const getResult = record.find(season => season.result === "W")
+        if (getResult){
+        return getResult.year
     }
 }
